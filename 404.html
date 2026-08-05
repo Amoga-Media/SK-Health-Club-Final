@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>Page Not Found | SK Health Club Pune</title>
+  <meta name="description" content="This page doesn't exist. Head back to SK Health Club Pune." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+  <div id="cursor-dot"></div>
+  <div id="cursor-aura"><span class="aura-label"></span></div>
+
+  <div class="notfound-wrap">
+    <div class="section-eyebrow-pill mb-8" data-reveal="fade"><span class="dot"></span>Lost Your Way?</div>
+    <h1 class="notfound-code" data-reveal="scale">404</h1>
+    <h2 class="notfound-title" data-reveal="rise">This Set Doesn't Exist</h2>
+    <p class="notfound-desc" data-reveal="rise" data-reveal-delay="0.1">The page you're looking for has been moved, deleted, or maybe it never existed. Let's get you back on track.</p>
+    <div class="flex flex-wrap gap-4 justify-center" data-reveal="rise" data-reveal-delay="0.2">
+      <a href="/index.html" class="btn-primary cursor-none" data-cursor>
+        Back to Home
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+      </a>
+      <a href="/pages/contact.html" class="btn-ghost cursor-none" data-cursor>Contact Us</a>
+    </div>
+  </div>
+
+  <script src="/js/vendor/gsap.min.js"></script>
+  <script src="/js/vendor/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    document.querySelectorAll("[data-reveal]").forEach((el, i) => {
+      const delay = parseFloat(el.getAttribute("data-reveal-delay")) || i * 0.05;
+      setTimeout(() => el.classList.add("is-visible"), 200 + delay * 1000);
+    });
+  </script>
+</body>
+</html>
