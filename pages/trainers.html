@@ -34,7 +34,9 @@
   <div id="pill-cursor"></div>
   <div id="global-nav"></div>
 
-  <section class="page-hero relative min-h-[65vh] flex items-center overflow-hidden" style="background:var(--bg)">
+  <section class="page-hero relative min-h-screen flex items-center overflow-hidden" style="background:var(--bg)">
+    <img src="/Images/images/desktop/photo-11-desktop.webp" alt="Trainers Background" class="absolute inset-0 w-full h-full object-cover opacity-20" id="page-hero-bg" />
+    <div class="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-transparent to-transparent z-0"></div>
     <div class="relative z-10 w-full max-w-[1320px] mx-auto px-6 md:px-10 pt-32 lg:pt-16 pb-16">
       <div class="max-w-2xl">
         <span class="section-eyebrow-pill" id="phl"><span class="dot"></span>Our Coaches</span>
@@ -58,16 +60,16 @@
 
       <div class="flex flex-col gap-8">
         <div class="bracket-card grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr]" data-reveal="rise">
-          <div class="relative min-h-[340px] lg:min-h-full overflow-hidden rounded-t-[28px] lg:rounded-l-[28px] lg:rounded-tr-none">
-            <img src="/assets/images/ripunjay.jpg" alt="Ripunjay Lashkare" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="relative min-h-[340px] lg:min-h-full overflow-hidden rounded-t-[28px] lg:rounded-l-[28px] lg:rounded-tr-none bg-black">
+            <img src="/Images/images/Trainers/Riipunjay.PNG" alt="Ripunjay Lashkare" class="absolute inset-0 w-full h-full object-cover object-top" />
           </div>
           <div class="p-8 lg:p-12">
             <div class="flex items-start justify-between mb-6">
-              <div><h2 class="font-poppins font-bold text-2xl lg:text-3xl uppercase">Ripunjay Lashkare</h2><p class="text-[var(--muted)] font-satoshi text-sm mt-1">Head Trainer &amp; Founder</p></div>
-              <div class="text-right shrink-0"><span class="block font-poppins font-extrabold text-3xl text-[var(--yellow)]">15</span><span class="text-[10px] tracking-widest uppercase text-[var(--muted)]">Years Exp.</span></div>
+              <div><h2 class="font-poppins font-bold text-2xl lg:text-3xl uppercase">Ripunjay Lashkare</h2><p class="text-[var(--muted)] font-satoshi text-sm mt-1">Head Coach</p></div>
+              <div class="text-right shrink-0"><span class="block font-poppins font-extrabold text-3xl text-[var(--yellow)]">16</span><span class="text-[10px] tracking-widest uppercase text-[var(--muted)]">Years Exp.</span></div>
             </div>
-            <p class="body-text">Ripunjay founded SK Health Club with a vision to democratize premium fitness in Pune. With 15 years of hands-on coaching experience, he has transformed hundreds of bodies — from complete beginners to competitive athletes. His approach blends science-backed programming with deep personal accountability.</p>
-            <p class="body-text">He specializes in body recomposition, strength training, fat loss programming and metabolic conditioning. He believes that 90% of transformation is mental — and he coaches accordingly.</p>
+            <p class="body-text">Ripunjay Lashkare is a fitness entrepreneur, nutritionist, bodybuilding coach, and actor with over 16+ years of experience transforming lives through evidence-based training and nutrition.</p>
+            <p class="body-text">As the founder of S K Health Club, he is committed to creating world-class fitness experiences that help people build strength, confidence, and long-term health. Having guided thousands of clients toward their fitness goals, Ripunjay combines practical coaching, disciplined programming, and a results-driven approach to deliver sustainable transformations—both on and off the stage.</p>
             <div class="flex flex-wrap gap-2 my-6">
               <span class="tc-tag">Strength &amp; Conditioning</span><span class="tc-tag">Fat Loss</span><span class="tc-tag">Physique Development</span><span class="tc-tag">Metabolic Conditioning</span>
             </div>
@@ -75,21 +77,93 @@
           </div>
         </div>
 
-        <div class="bracket-card grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr]" data-reveal="rise" data-reveal-delay="0.1">
-          <div class="relative min-h-[340px] lg:min-h-full overflow-hidden rounded-t-[28px] lg:rounded-l-[28px] lg:rounded-tr-none">
-            <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=700&auto=format&fit=crop" alt="Rohit Lashkare" class="absolute inset-0 w-full h-full object-cover" />
+        <div class="bracket-card grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr]" data-reveal="rise" data-reveal-delay="0.1">
+          <div class="relative min-h-[340px] lg:min-h-full overflow-hidden rounded-t-[28px] lg:rounded-none lg:rounded-r-[28px] bg-black order-1 lg:order-2">
+            <img src="/Images/images/Trainers/rohit.jpeg" alt="Rohit dhotre" class="absolute inset-0 w-full h-full object-cover object-top" />
           </div>
-          <div class="p-8 lg:p-12">
+          <div class="p-8 lg:p-12 order-2 lg:order-1">
             <div class="flex items-start justify-between mb-6">
-              <div><h2 class="font-poppins font-bold text-2xl lg:text-3xl uppercase">Rohit Lashkare</h2><p class="text-[var(--muted)] font-satoshi text-sm mt-1">Senior Master Trainer</p></div>
+              <div><h2 class="font-poppins font-bold text-2xl lg:text-3xl uppercase">Rohit dhotre</h2><p class="text-[var(--muted)] font-satoshi text-sm mt-1">Coach</p></div>
               <div class="text-right shrink-0"><span class="block font-poppins font-extrabold text-3xl text-[var(--yellow)]">20</span><span class="text-[10px] tracking-widest uppercase text-[var(--muted)]">Years Exp.</span></div>
             </div>
-            <p class="body-text">Rohit Lashkare is the backbone of SK Health Club's coaching philosophy. With 20 years of experience — the longest of any trainer on our team — Rohit has seen every fitness challenge imaginable and developed solutions for all of them. He is Ripunjay's brother and co-architect of the SK system.</p>
+            <p class="body-text">Rohit dhotre is the backbone of SK Health Club's coaching philosophy. With 20 years of experience — the longest of any trainer on our team — Rohit has seen every fitness challenge imaginable and developed solutions for all of them.</p>
             <p class="body-text">Rohit's particular genius lies in movement quality, injury prevention, and endurance programming. His clients consistently report not just better physiques, but improved quality of life and newfound athletic capability.</p>
             <div class="flex flex-wrap gap-2 my-6">
               <span class="tc-tag">Boxing &amp; Combat Sports</span><span class="tc-tag">Endurance Training</span><span class="tc-tag">Recovery &amp; Rehab</span><span class="tc-tag">Movement Correction</span>
             </div>
             <a href="/pages/contact.html" class="text-link" data-cursor>Book a Session with Rohit <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
+          </div>
+        </div>
+
+        <div class="bracket-card grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr]" data-reveal="rise" data-reveal-delay="0.1">
+          <div class="relative min-h-[340px] lg:min-h-full overflow-hidden rounded-t-[28px] lg:rounded-l-[28px] lg:rounded-tr-none bg-black">
+            <img src="/Images/images/Trainers/Sanjay.jpeg" alt="Kaushal Patel" class="absolute inset-0 w-full h-full object-cover object-top" />
+          </div>
+          <div class="p-8 lg:p-12">
+            <div class="flex items-start justify-between mb-6">
+              <div><h2 class="font-poppins font-bold text-2xl lg:text-3xl uppercase">Kaushal Patel</h2><p class="text-[var(--muted)] font-satoshi text-sm mt-1">Personal trainer</p></div>
+              <div class="text-right shrink-0"><span class="block font-poppins font-extrabold text-3xl text-[var(--yellow)]">12</span><span class="text-[10px] tracking-widest uppercase text-[var(--muted)]">Years Exp.</span></div>
+            </div>
+            <p class="body-text">Kaushal brings an old-school work ethic combined with modern sports science. As our personal trainer, he specializes in building raw power and lean muscle. He has a track record of helping clients break through plateaus and achieve their absolute strongest selves.</p>
+            <p class="body-text">His methodology is simple: master the fundamentals, push the limits safely, and eat for performance. Kaushal doesn't do fads; he does results.</p>
+            <div class="flex flex-wrap gap-2 my-6">
+              <span class="tc-tag">Powerlifting</span><span class="tc-tag">Hypertrophy</span><span class="tc-tag">Strength Mechanics</span>
+            </div>
+            <a href="/pages/contact.html" class="text-link" data-cursor>Book a Session with Kaushal <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
+          </div>
+        </div>
+
+        <div class="bracket-card grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr]" data-reveal="rise" data-reveal-delay="0.1">
+          <div class="relative min-h-[340px] lg:min-h-full overflow-hidden rounded-t-[28px] lg:rounded-none lg:rounded-r-[28px] bg-black order-1 lg:order-2">
+            <img src="/Images/images/Trainers/amit.jpeg" alt="Aniket pawar" class="absolute inset-0 w-full h-full object-cover object-top" />
+          </div>
+          <div class="p-8 lg:p-12 order-2 lg:order-1">
+            <div class="flex items-start justify-between mb-6">
+              <div><h2 class="font-poppins font-bold text-2xl lg:text-3xl uppercase">Aniket pawar</h2><p class="text-[var(--muted)] font-satoshi text-sm mt-1">Personal trainer</p></div>
+              <div class="text-right shrink-0"><span class="block font-poppins font-extrabold text-3xl text-[var(--yellow)]">10</span><span class="text-[10px] tracking-widest uppercase text-[var(--muted)]">Years Exp.</span></div>
+            </div>
+            <p class="body-text">Aniket is a dynamic coach who believes that fitness should enhance how you move in everyday life. Specializing in functional training and mobility, his workouts are high-energy, constantly varied, and incredibly effective for fat loss and core strength.</p>
+            <p class="body-text">He focuses heavily on agility, balance, and endurance, making him the go-to trainer for athletes looking to improve their on-field performance or anyone wanting to feel lighter and faster.</p>
+            <div class="flex flex-wrap gap-2 my-6">
+              <span class="tc-tag">Functional Training</span><span class="tc-tag">Mobility</span><span class="tc-tag">Fat Loss</span><span class="tc-tag">Agility</span>
+            </div>
+            <a href="/pages/contact.html" class="text-link" data-cursor>Book a Session with Aniket <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
+          </div>
+        </div>
+
+        <div class="bracket-card grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr]" data-reveal="rise" data-reveal-delay="0.1">
+          <div class="relative min-h-[340px] lg:min-h-full overflow-hidden rounded-t-[28px] lg:rounded-l-[28px] lg:rounded-tr-none bg-black">
+            <img src="/Images/images/Trainers/ishaan.jpeg" alt="Ishaan Sharma" class="absolute inset-0 w-full h-full object-cover object-top" />
+          </div>
+          <div class="p-8 lg:p-12">
+            <div class="flex items-start justify-between mb-6">
+              <div><h2 class="font-poppins font-bold text-2xl lg:text-3xl uppercase">Ishaan Sharma</h2><p class="text-[var(--muted)] font-satoshi text-sm mt-1">Personal Trainer</p></div>
+              <div class="text-right shrink-0"><span class="block font-poppins font-extrabold text-3xl text-[var(--yellow)]">8</span><span class="text-[10px] tracking-widest uppercase text-[var(--muted)]">Years Exp.</span></div>
+            </div>
+            <p class="body-text">Ishaan brings a highly analytical approach to fitness. As a dual-certified performance and nutrition coach, he seamlessly integrates diet plans with rigorous training regimes to ensure clients hit their goals faster and sustain them longer.</p>
+            <p class="body-text">He is an expert at body recomposition and works extensively with busy professionals to create routines that are time-efficient but yield maximum results.</p>
+            <div class="flex flex-wrap gap-2 my-6">
+              <span class="tc-tag">Nutrition Prep</span><span class="tc-tag">HIIT</span><span class="tc-tag">Recomposition</span>
+            </div>
+            <a href="/pages/contact.html" class="text-link" data-cursor>Book a Session with Ishaan <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
+          </div>
+        </div>
+
+        <div class="bracket-card grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr]" data-reveal="rise" data-reveal-delay="0.1">
+          <div class="relative min-h-[340px] lg:min-h-full overflow-hidden rounded-t-[28px] lg:rounded-none lg:rounded-r-[28px] bg-black order-1 lg:order-2">
+            <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&amp;w=700&amp;auto=format&amp;fit=crop" alt="Usama Shaikh" class="absolute inset-0 w-full h-full object-cover object-top" />
+          </div>
+          <div class="p-8 lg:p-12 order-2 lg:order-1">
+            <div class="flex items-start justify-between mb-6">
+              <div><h2 class="font-poppins font-bold text-2xl lg:text-3xl uppercase">Usama Shaikh</h2><p class="text-[var(--muted)] font-satoshi text-sm mt-1">Personal Trainer</p></div>
+              <div class="text-right shrink-0"><span class="block font-poppins font-extrabold text-3xl text-[var(--yellow)]">6</span><span class="text-[10px] tracking-widest uppercase text-[var(--muted)]">Years Exp.</span></div>
+            </div>
+            <p class="body-text">Usama is a dedicated personal trainer who specializes in transforming beginners into confident, capable athletes. His patience and focus on perfect form ensure that every client builds a solid foundation before moving to heavy lifting.</p>
+            <p class="body-text">He believes that a good trainer is also an educator, and works tirelessly to make sure you understand the 'why' behind every exercise on your program.</p>
+            <div class="flex flex-wrap gap-2 my-6">
+              <span class="tc-tag">Beginner Fundamentals</span><span class="tc-tag">Fat Loss</span><span class="tc-tag">Core Strength</span>
+            </div>
+            <a href="/pages/contact.html" class="text-link" data-cursor>Book a Session with Usama <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a>
           </div>
         </div>
       </div>
@@ -98,23 +172,88 @@
 
   <section class="inner-section py-16 lg:py-24" style="background:var(--bg2); border-top:1px solid var(--line-soft)">
     <div class="inner-container">
-      <div class="text-center max-w-xl mx-auto mb-4">
-        <span class="kicker centered">The Squad</span>
-        <h2 class="section-title" data-reveal="mask">Elite<br /><span class="yellow-text">Coaches</span></h2>
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-poppins text-4xl md:text-5xl font-bold text-white mb-4">Our trusted <span class="bg-[#ff5a5f] text-white px-3 py-1 rounded-xl">Clients</span></h2>
+        <p class="text-white/60 font-satoshi text-sm md:text-base leading-relaxed mt-6">Our mission is to drive progress and enhance the lives of our customers by delivering superior products and services that exceed expectations.</p>
       </div>
 
-      <div class="swiper squad-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><div class="squad-card bracket-card"><p class="squad-quote">"Strength is never a weakness. Let's build your foundation."</p><h3 class="squad-name">Vikram Desai</h3><p class="squad-role">Elite Strength Coach · 14 Years</p><div class="squad-tags"><span class="tc-tag">Powerlifting</span><span class="tc-tag">Hypertrophy</span></div></div></div>
-          <div class="swiper-slide"><div class="squad-card bracket-card"><p class="squad-quote">"Flexibility in the body creates flexibility in the mind."</p><h3 class="squad-name">Neha Sharma</h3><p class="squad-role">Yoga &amp; Mobility Specialist · 9 Years</p><div class="squad-tags"><span class="tc-tag">Mobility</span><span class="tc-tag">Core</span></div></div></div>
-          <div class="swiper-slide"><div class="squad-card bracket-card"><p class="squad-quote">"We train for life, not just for the mirror."</p><h3 class="squad-name">Arjun Patil</h3><p class="squad-role">Functional Training Coach · 10 Years</p><div class="squad-tags"><span class="tc-tag">CrossFit</span><span class="tc-tag">Agility</span></div></div></div>
-          <div class="swiper-slide"><div class="squad-card bracket-card"><p class="squad-quote">"Consistency is the only magic pill that exists."</p><h3 class="squad-name">Sarah Mendes</h3><p class="squad-role">Fat Loss Expert · 8 Years</p><div class="squad-tags"><span class="tc-tag">HIIT</span><span class="tc-tag">Weight Loss</span></div></div></div>
-          <div class="swiper-slide"><div class="squad-card bracket-card"><p class="squad-quote">"Leave your ego at the door, bring your work ethic."</p><h3 class="squad-name">Kabir Singh</h3><p class="squad-role">Combat &amp; Striking Coach · 12 Years</p><div class="squad-tags"><span class="tc-tag">Boxing</span><span class="tc-tag">Kickboxing</span></div></div></div>
-          <div class="swiper-slide"><div class="squad-card bracket-card"><p class="squad-quote">"You can't out-train a bad diet. Let's fix both."</p><h3 class="squad-name">Ananya Rao</h3><p class="squad-role">Nutrition &amp; Transformation · 7 Years</p><div class="squad-tags"><span class="tc-tag">Diet Prep</span><span class="tc-tag">Recomp</span></div></div></div>
-          <div class="swiper-slide"><div class="squad-card bracket-card"><p class="squad-quote">"If it doesn't challenge you, it won't change you."</p><h3 class="squad-name">Siddharth Joshi</h3><p class="squad-role">Performance Coach · 9 Years</p><div class="squad-tags"><span class="tc-tag">Athletics</span><span class="tc-tag">Explosive Power</span></div></div></div>
-          <div class="swiper-slide"><div class="squad-card bracket-card"><p class="squad-quote">"Empowering women to lift heavy and take up space."</p><h3 class="squad-name">Meera Kapoor</h3><p class="squad-role">Women's Fitness Specialist · 8 Years</p><div class="squad-tags"><span class="tc-tag">Pre/Post Natal</span><span class="tc-tag">Glute Focus</span></div></div></div>
-          <div class="swiper-slide"><div class="squad-card bracket-card"><p class="squad-quote">"Perfect the form, the weight will follow."</p><h3 class="squad-name">Rahul Verma</h3><p class="squad-role">Olympic Weightlifting · 11 Years</p><div class="squad-tags"><span class="tc-tag">Oly Lifts</span><span class="tc-tag">Biomechanics</span></div></div></div>
-          <div class="swiper-slide"><div class="squad-card bracket-card"><p class="squad-quote">"Recovery is where the actual growth happens."</p><h3 class="squad-name">Pooja Iyer</h3><p class="squad-role">Recovery &amp; Rehab Specialist · 8 Years</p><div class="squad-tags"><span class="tc-tag">Physiotherapy</span><span class="tc-tag">Restoration</span></div></div></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 relative">
+        <!-- Card 1 -->
+        <div class="bracket-card rounded-3xl p-8 relative flex flex-col justify-between h-full -rotate-3 transform hover:rotate-0 transition-transform duration-300 z-10 scale-105">
+          <div class="flex justify-between items-start mb-6">
+            <div class="font-black text-2xl text-white tracking-tighter">hulu</div>
+            <div class="flex items-center gap-1 font-bold text-sm text-white">4.9 <span class="text-[var(--yellow)]">★</span></div>
+          </div>
+          <p class="text-[15px] text-[var(--muted)] leading-relaxed mb-8">"Ripunjay's programming is fantastic. It's motivating to see how much my strength has improved over time. The gym has a great mix of equipment."</p>
+          <div>
+            <h4 class="font-bold text-[17px] text-white">Kate Davis</h4>
+            <p class="text-xs text-[var(--yellow)] mt-1">fitness_captain_8</p>
+          </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="bracket-card rounded-3xl p-8 relative flex flex-col justify-between h-full hover:-translate-y-2 transition-transform duration-300">
+          <div class="flex justify-between items-start mb-6">
+            <div class="font-black text-2xl text-white tracking-tighter">HBOmax</div>
+            <div class="flex items-center gap-1 font-bold text-sm text-white">4.8 <span class="text-[var(--yellow)]">★</span></div>
+          </div>
+          <p class="text-[15px] text-[var(--muted)] leading-relaxed mb-8">"The trainers here are next level. Rohit pushes you exactly as much as you need, and the results speak for themselves."</p>
+          <div>
+            <h4 class="font-bold text-[17px] text-white">Martin Kazlauskas</h4>
+            <p class="text-xs text-[var(--yellow)] mt-1">sartorial_statue_59</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bracket-card rounded-3xl p-8 relative flex flex-col justify-between h-full hover:-translate-y-2 transition-transform duration-300">
+          <div class="flex justify-between items-start mb-6">
+            <div class="font-black text-2xl text-white tracking-tighter">Disney+</div>
+            <div class="flex items-center gap-1 font-bold text-sm text-white">4.9 <span class="text-[var(--yellow)]">★</span></div>
+          </div>
+          <p class="text-[15px] text-[var(--muted)] leading-relaxed mb-8">"I lost 15kg in 4 months. The personalized approach makes all the difference. It's not just a gym, it's a transformation center."</p>
+          <div>
+            <h4 class="font-bold text-[17px] text-white">Sanjay Sharma</h4>
+            <p class="text-xs text-[var(--yellow)] mt-1">voracious_rainbows_68</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bracket-card rounded-3xl p-8 relative flex flex-col justify-between h-full hover:-translate-y-2 transition-transform duration-300">
+          <div class="flex justify-between items-start mb-6">
+            <div class="font-black text-2xl text-white tracking-tighter">STARZ</div>
+            <div class="flex items-center gap-1 font-bold text-sm text-white">4.7 <span class="text-[var(--yellow)]">★</span></div>
+          </div>
+          <p class="text-[15px] text-[var(--muted)] leading-relaxed mb-8">"The boxing arena and the coaching by Kabir are simply outstanding. Best stress buster after a long day at work."</p>
+          <div>
+            <h4 class="font-bold text-[17px] text-white">Tawanna Afumba</h4>
+            <p class="text-xs text-[var(--yellow)] mt-1">intransigent_toejam_15</p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bracket-card rounded-3xl p-8 relative flex flex-col justify-between h-full hover:-translate-y-2 transition-transform duration-300">
+          <div class="flex justify-between items-start mb-6">
+            <div class="font-black text-2xl text-white tracking-tighter">Vix</div>
+            <div class="flex items-center gap-1 font-bold text-sm text-white">4.9 <span class="text-[var(--yellow)]">★</span></div>
+          </div>
+          <p class="text-[15px] text-[var(--muted)] leading-relaxed mb-8">"The group classes are highly energetic and the community is super welcoming. Yoga sessions with Neha are my favorite."</p>
+          <div>
+            <h4 class="font-bold text-[17px] text-white">Larry King</h4>
+            <p class="text-xs text-[var(--yellow)] mt-1">pendulous_unicorn_46</p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bracket-card rounded-3xl p-8 relative flex flex-col justify-between h-full hover:-translate-y-2 transition-transform duration-300">
+          <div class="flex justify-between items-start mb-6">
+            <div class="font-black text-2xl text-white tracking-tighter">prime video</div>
+            <div class="flex items-center gap-1 font-bold text-sm text-white">4.8 <span class="text-[var(--yellow)]">★</span></div>
+          </div>
+          <p class="text-[15px] text-[var(--muted)] leading-relaxed mb-8">"Incredible facilities! From the aesthetic swimming pool to the high-tech cardio zone, it's everything you could ask for in a premium club."</p>
+          <div>
+            <h4 class="font-bold text-[17px] text-white">Fatima Mohamed</h4>
+            <p class="text-xs text-[var(--yellow)] mt-1">salubrious_artist_72</p>
+          </div>
         </div>
       </div>
     </div>
@@ -126,11 +265,11 @@
         <span class="kicker centered">The Process</span>
         <h2 class="section-title" data-reveal="mask">How Personal<br /><span class="yellow-text">Training Works</span></h2>
       </div>
-      <div class="process-grid">
-        <div class="process-step" data-reveal="fade"><span class="ps-num">01</span><h3 class="ps-title">Assessment</h3><p class="ps-desc">We start with a comprehensive body assessment — weight, measurements, movement screening, and goal mapping. No guesswork.</p></div>
-        <div class="process-step" data-reveal="fade" data-reveal-delay="0.1"><span class="ps-num">02</span><h3 class="ps-title">Custom Plan</h3><p class="ps-desc">Your trainer builds a fully personalized training and nutrition plan specific to your body type, goals, and schedule.</p></div>
-        <div class="process-step" data-reveal="fade" data-reveal-delay="0.2"><span class="ps-num">03</span><h3 class="ps-title">Execute</h3><p class="ps-desc">Train with your coach 1-on-1. Every session is tracked, adjusted and optimized. Your form is corrected in real time.</p></div>
-        <div class="process-step" data-reveal="fade" data-reveal-delay="0.3"><span class="ps-num">04</span><h3 class="ps-title">Transform</h3><p class="ps-desc">Monthly progress reviews, body composition updates, and celebration of every milestone. Results you can see and feel.</p></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+        <div class="process-step h-full rounded-2xl" data-reveal="fade"><span class="ps-num">01</span><h3 class="ps-title">Assessment</h3><p class="ps-desc">We start with a comprehensive body assessment — weight, measurements, movement screening, and goal mapping. No guesswork.</p></div>
+        <div class="process-step h-full rounded-2xl" data-reveal="fade" data-reveal-delay="0.1"><span class="ps-num">02</span><h3 class="ps-title">Custom Plan</h3><p class="ps-desc">Your trainer builds a fully personalized training and nutrition plan specific to your body type, goals, and schedule.</p></div>
+        <div class="process-step h-full rounded-2xl" data-reveal="fade" data-reveal-delay="0.2"><span class="ps-num">03</span><h3 class="ps-title">Execute</h3><p class="ps-desc">Train with your coach 1-on-1. Every session is tracked, adjusted and optimized. Your form is corrected in real time.</p></div>
+        <div class="process-step h-full rounded-2xl" data-reveal="fade" data-reveal-delay="0.3"><span class="ps-num">04</span><h3 class="ps-title">Transform</h3><p class="ps-desc">Monthly progress reviews, body composition updates, and celebration of every milestone. Results you can see and feel.</p></div>
       </div>
     </div>
   </section>

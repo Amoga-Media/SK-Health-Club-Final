@@ -121,17 +121,23 @@
     /* ── PILL CURSOR (image preview on hover) ── */
     const pillCursor = document.getElementById("pill-cursor");
     if (pillCursor) {
+      // Set the center offset once so GSAP remembers it
+      gsap.set(pillCursor, { xPercent: -50, yPercent: -50 });
+      
       document.querySelectorAll(".hover-pill").forEach((el) => {
         const img = el.getAttribute("data-img");
         if (!img) return;
-        el.addEventListener("mouseenter", () => {
+        el.addEventListener("mouseenter", (e) => {
           pillCursor.style.backgroundImage = `url(${img})`;
+          gsap.set(pillCursor, { x: e.clientX, y: e.clientY });
           gsap.to(pillCursor, { opacity: 1, scale: 1, duration: 0.35, ease: "power3.out" });
         });
         el.addEventListener("mouseleave", () => {
           gsap.to(pillCursor, { opacity: 0, scale: 0.5, duration: 0.25, ease: "power2.in" });
         });
-        el.addEventListener("mousemove", (e) => gsap.set(pillCursor, { x: e.clientX, y: e.clientY }));
+        el.addEventListener("mousemove", (e) => {
+          gsap.to(pillCursor, { x: e.clientX, y: e.clientY, duration: 0.1, ease: "power1.out" });
+        });
       });
     }
 
