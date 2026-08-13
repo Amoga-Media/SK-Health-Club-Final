@@ -130,13 +130,13 @@
         el.addEventListener("mouseenter", (e) => {
           pillCursor.style.backgroundImage = `url(${img})`;
           gsap.set(pillCursor, { x: e.clientX, y: e.clientY });
-          gsap.to(pillCursor, { opacity: 1, scale: 1, duration: 0.35, ease: "power3.out" });
+          gsap.to(pillCursor, { opacity: 1, scale: 1, duration: 0.35, ease: "power3.out", overwrite: "auto" });
         });
         el.addEventListener("mouseleave", () => {
-          gsap.to(pillCursor, { opacity: 0, scale: 0.5, duration: 0.25, ease: "power2.in" });
+          gsap.to(pillCursor, { opacity: 0, scale: 0.5, duration: 0.25, ease: "power2.in", overwrite: "auto" });
         });
         el.addEventListener("mousemove", (e) => {
-          gsap.to(pillCursor, { x: e.clientX, y: e.clientY, duration: 0.1, ease: "power1.out" });
+          gsap.to(pillCursor, { x: e.clientX, y: e.clientY, duration: 0.1, ease: "power1.out", overwrite: "auto" });
         });
       });
     }
@@ -332,20 +332,108 @@
       });
     });
 
-    /* ── FORM SUBMIT (static demo handler) ── */
-    const submitBtn = document.getElementById("submit-btn");
-    if (submitBtn) {
-      submitBtn.addEventListener("click", function (e) {
+    /* ── FORM SUBMIT (Web3Forms AJAX handler) ── */
+    const forms = document.querySelectorAll(".join-form");
+    forms.forEach(form => {
+      form.addEventListener("submit", function(e) {
         e.preventDefault();
-        const original = this.innerHTML;
-        this.innerHTML = "✓ Sent — we'll be in touch soon";
-        this.style.background = "#fff";
-        setTimeout(() => {
-          this.innerHTML = original;
-          this.style.background = "";
-        }, 4000);
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        const originalBg = submitBtn.style.background;
+        const originalColor = submitBtn.style.color;
+        
+        // Rate limiting check
+        try {
+          const now = new Date();
+          const currentMonth = now.getMonth();
+          const currentYear = now.getFullYear();
+          let submitData = JSON.parse(localStorage.getItem("sk_form_submissions")) || { count: 0, month: currentMonth, year: currentYear };
+          
+          if (submitData.month !== currentMonth || submitData.year !== currentYear) {
+            submitData = { count: 0, month: currentMonth, year: currentYear };
+          }
+          
+          if (submitData.count >= 4) {
+            submitBtn.innerHTML = "Limit Reached (4/month)";
+            submitBtn.style.background = "#ff4444";
+            submitBtn.style.color = "#fff";
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.style.background = originalBg;
+                submitBtn.style.color = originalColor;
+            }, 4000);
+            return;
+          }
+        } catch (err) {
+          console.error("Rate limit check failed", err);
+        }
+
+        // Change button text to indicate loading
+        submitBtn.innerHTML = "Sending...";
+        submitBtn.style.opacity = "0.7";
+        submitBtn.disabled = true;
+
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let jsonResponse = await response.json();
+            if (response.status == 200) {
+                // Success
+                
+                // Increment rate limit
+                try {
+                  const now = new Date();
+                  const currentMonth = now.getMonth();
+                  const currentYear = now.getFullYear();
+                  let submitData = JSON.parse(localStorage.getItem("sk_form_submissions")) || { count: 0, month: currentMonth, year: currentYear };
+                  if (submitData.month !== currentMonth || submitData.year !== currentYear) {
+                    submitData = { count: 0, month: currentMonth, year: currentYear };
+                  }
+                  submitData.count++;
+                  localStorage.setItem("sk_form_submissions", JSON.stringify(submitData));
+                } catch (err) {
+                  console.error("Rate limit update failed", err);
+                }
+
+                submitBtn.innerHTML = "✓ SENT — WE'LL BE IN TOUCH SOON";
+                submitBtn.style.background = "#fff";
+                submitBtn.style.color = "#000";
+                submitBtn.style.opacity = "1";
+                form.reset();
+                
+                // Revert button after 4 seconds
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.style.background = originalBg;
+                    submitBtn.style.color = originalColor;
+                    submitBtn.disabled = false;
+                }, 4000);
+            } else {
+                // Error
+                console.error(jsonResponse);
+                submitBtn.innerHTML = "Error sending message";
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = "1";
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            submitBtn.innerHTML = "Something went wrong!";
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = "1";
+        });
       });
-    }
+    });
 
     ScrollTrigger.sort();
   }

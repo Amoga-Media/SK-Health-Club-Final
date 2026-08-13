@@ -10,14 +10,15 @@
     "start": "live-server --port=3000 --host=localhost"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.0",
-    "postcss": "^8.4.35",
     "autoprefixer": "^10.4.17",
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.2",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.0"
   },
   "dependencies": {
     "gsap": "^3.12.5",
     "lenis": "^1.1.14",
+    "sharp": "^0.35.3",
     "swiper": "^11.0.0"
   }
 }

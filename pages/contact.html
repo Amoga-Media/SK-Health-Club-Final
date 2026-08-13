@@ -7,7 +7,7 @@
   <meta name="author" content="SK Health Club Pune" />
   <meta name="theme-color" content="#0a0a0a" />
   <meta property="og:url" content="https://www.skhealthclub.com/pages/contact.html" />
-  <meta property="og:image" content="https://www.skhealthclub.com/assets/images/ripunjay.jpg" />
+  
   <link rel="canonical" href="https://www.skhealthclub.com/pages/contact.html" />
   <title>Contact Us | SK Health Club Pune</title>
   <meta name="description" content="Book your free trial at SK Health Club Pune. Call, WhatsApp, or visit any of our 3 locations." />
@@ -15,6 +15,8 @@
   <meta property="og:description" content="Book your free trial at SK Health Club Pune. Call, WhatsApp, or visit any of our 3 locations." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_IN" />
+  <link rel="icon" type="image/png" href="/Images/images/logo/SK.png" />
+  <link rel="apple-touch-icon" href="/Images/images/logo/SK.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
@@ -34,7 +36,12 @@
   <div id="cursor-aura"><span class="aura-label"></span></div>
   <div id="global-nav"></div>
 
-  <section class="page-hero relative min-h-[60vh] flex items-center overflow-hidden" style="background:var(--bg)">
+  <section class="page-hero relative min-h-[60vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="/Images/images/desktop/Hero.webp" alt="SK Health Club Reception" class="w-full h-full object-cover object-center" />
+      <div class="absolute inset-0 bg-black/75"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[var(--bg)] to-transparent"></div>
+    </div>
     <div class="relative z-10 w-full max-w-[1320px] mx-auto px-6 md:px-10 pt-32 lg:pt-16 pb-16">
       <div class="max-w-2xl">
         <span class="section-eyebrow-pill" id="phl"><span class="dot"></span>Let's Talk</span>
@@ -57,9 +64,10 @@
           <p class="body-text mb-10">Our team responds within hours. Reach out via WhatsApp for the fastest response.</p>
 
           <div class="flex flex-col gap-6 mb-10">
-            <div class="ji-item"><span class="ji-icon">📞</span><div><p class="ji-label">Phone / WhatsApp</p><a href="tel:+919876543210" class="font-poppins font-bold text-lg hover:text-[var(--yellow)] transition-colors">+91 98765 43210</a></div></div>
-            <div class="ji-item"><span class="ji-icon">✉️</span><div><p class="ji-label">Email</p><a href="mailto:hello@skhealthclub.com" class="font-poppins font-bold text-lg hover:text-[var(--yellow)] transition-colors">hello@skhealthclub.com</a></div></div>
-            <div class="ji-item"><span class="ji-icon">📸</span><div><p class="ji-label">Instagram</p><a href="https://instagram.com/skhealthclub.pune" target="_blank" rel="noopener noreferrer" class="font-poppins font-bold text-lg hover:text-[var(--yellow)] transition-colors">@skhealthclub.pune</a></div></div>
+            <div class="ji-item"><span class="ji-icon">📞</span><div><p class="ji-label">Phone / WhatsApp</p><a href="tel:+917276061057" class="font-poppins font-bold text-lg hover:text-[var(--yellow)] transition-colors">+91 72760 61057</a></div></div>
+            <div class="ji-item"><span class="ji-icon">✉️</span><div><p class="ji-label">Email</p><a href="mailto:skhealthclubpune@gmail.com" class="font-poppins font-bold text-lg hover:text-[var(--yellow)] transition-colors">skhealthclubpune@gmail.com</a></div></div>
+            <div class="ji-item"><span class="ji-icon">📸</span><div><p class="ji-label">Instagram</p><a href="https://www.instagram.com/skhealthclub_vimannagar/" target="_blank" rel="noopener noreferrer" class="font-poppins font-bold text-lg hover:text-[var(--yellow)] transition-colors">@skhealthclub_vimannagar</a></div></div>
+            <div class="ji-item"><span class="ji-icon">🌐</span><div><p class="ji-label">Facebook</p><a href="https://www.facebook.com/people/S-K-Health-Club-Viman-nagar/61585382744034/" target="_blank" rel="noopener noreferrer" class="font-poppins font-bold text-lg hover:text-[var(--yellow)] transition-colors">SK Health Club Viman Nagar</a></div></div>
           </div>
 
           <h3 class="font-poppins font-bold text-xl uppercase mb-5">Locations</h3>
@@ -72,16 +80,18 @@
 
         <div class="join-form-wrap" data-reveal="rise" data-reveal-delay="0.1">
           <h3 class="join-form-title">Book Your Free Trial</h3>
-          <div class="join-form">
-            <div class="form-field-sk"><input type="text" placeholder="Your Name" aria-label="Your Name" required /></div>
-            <div class="form-field-sk"><input type="tel" placeholder="Phone Number" aria-label="Phone Number" required /></div>
+          <form action="https://api.web3forms.com/submit" method="POST" class="join-form">
+            <input type="hidden" name="access_key" value="d168fd71-bb95-4e8b-ae47-897841ab628c">
+            <input type="hidden" name="subject" value="New Free Trial Inquiry - SK Health Club">
+            <div class="form-field-sk"><input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required /></div>
+            <div class="form-field-sk"><input type="tel" name="phone" placeholder="Phone Number" aria-label="Phone Number" required /></div>
             <div class="form-field-sk">
               <div class="sk-select" data-cursor>
                 <button type="button" class="sk-select-trigger" aria-label="Select Preferred Location" aria-haspopup="listbox" aria-expanded="false">
                   <span class="sk-select-value">Preferred Location</span>
                   <svg class="sk-select-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
                 </button>
-                <div class="sk-select-menu" role="listbox">
+                <div class="sk-select-menu" role="listbox" data-lenis-prevent>
                   <div class="sk-select-option" role="option" data-value="Yerwada">Yerwada</div>
                   <div class="sk-select-option" role="option" data-value="Vishranwadi">Vishranwadi</div>
                   <div class="sk-select-option" role="option" data-value="Viman Nagar (Flagship)">Viman Nagar (Flagship)</div>
@@ -95,7 +105,7 @@
                   <span class="sk-select-value">Your Goal</span>
                   <svg class="sk-select-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
                 </button>
-                <div class="sk-select-menu" role="listbox">
+                <div class="sk-select-menu" role="listbox" data-lenis-prevent>
                   <div class="sk-select-option" role="option" data-value="Lose Weight / Fat Loss">Lose Weight / Fat Loss</div>
                   <div class="sk-select-option" role="option" data-value="Build Muscle / Strength">Build Muscle / Strength</div>
                   <div class="sk-select-option" role="option" data-value="Improve Fitness">Improve Fitness</div>
@@ -111,7 +121,7 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </button>
             <p class="form-note text-center">No credit card. No commitment. Just results.</p>
-          </div>
+          </form>
         </div>
       </div>
     </div>
@@ -134,7 +144,7 @@
         </div>
         <div class="faq-item">
           <div class="faq-question"><span>What's included in the membership?</span><span class="faq-icon">+</span></div>
-          <div class="faq-answer"><p>All memberships include access to the main gym floor and cardio zone. Standard and Premium plans add boxing, swimming, spinning, and group classes. Premium includes personal training sessions.</p></div>
+          <div class="faq-answer"><p>All memberships include access to the main gym floor and cardio zone. Standard and Premium plans add boxing, swimming, Yoga & Zumba, and group classes. Premium includes personal training sessions.</p></div>
         </div>
         <div class="faq-item">
           <div class="faq-question"><span>Do you have a women's-only zone?</span><span class="faq-icon">+</span></div>
@@ -146,7 +156,7 @@
         </div>
         <div class="faq-item">
           <div class="faq-question"><span>Which location is the biggest?</span><span class="faq-icon">+</span></div>
-          <div class="faq-answer"><p>Our Viman Nagar flagship is the largest at 20,000+ sq ft. It includes all facilities — boxing arena, Olympic swimming pool, spinning studio, strength floors, cardio zone, recovery room, and women's zone.</p></div>
+          <div class="faq-answer"><p>Our Viman Nagar flagship is the largest at 20,000+ sq ft. It includes all facilities — boxing arena, Olympic swimming pool, Yoga & Zumba Studio, strength floors, cardio zone, recovery room, and women's zone.</p></div>
         </div>
       </div>
     </div>
@@ -162,3 +172,5 @@
   <script src="/js/components.js"></script>
 </body>
 </html>
+
+
