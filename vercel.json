@@ -1,3 +1,6 @@
 {
-  "name": "sk-health-club"
+  "name": "sk-health-club",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".",
+  "installCommand": "npm install"
 }
