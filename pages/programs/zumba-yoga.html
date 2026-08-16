@@ -69,7 +69,7 @@
           <p class="body-text" data-reveal="rise" data-reveal-delay="0.10">Group classes are one of the most motivating ways to stay consistent. Join a welcoming community where every body type and fitness level can train together.</p>
         </div>
         <div data-reveal="scale">
-          <img src="/Images/images/mobile/photo-23-mobile.webp" alt="Group Classes" class="rounded-3xl w-full object-cover border border-white/5" style="height: 480px" / loading="lazy">
+          <img src="/Images/images/mobile/photo-23-mobile.webp" alt="Group Classes" class="rounded-3xl w-full object-cover border border-white/5" style="height: clamp(280px, 50vw, 480px); width: 100%; object-fit: cover;" / loading="lazy">
         </div>
       </div>
     </div>
@@ -93,16 +93,33 @@
   <section class="inner-section py-16 lg:py-24" style="background:var(--bg)">
     <div class="inner-container" style="max-width:980px">
       <div class="text-center mb-14">
-        <span class="kicker centered">Class Schedule</span>
-        <h2 class="section-title" data-reveal="mask">When To<br /><span class="yellow-text">Show Up</span></h2>
+        <span class="kicker centered">Official Timetable</span>
+        <h2 class="section-title" data-reveal="mask">Weekly Class<br /><span class="yellow-text">Timetable</span></h2>
+        <p class="text-white/60 font-satoshi text-sm md:text-base mt-2">Plan your week. Transform your life. Strong body. Strong mind. Better you.</p>
       </div>
       <div class="schedule-table" data-reveal="rise">
-        <div class="st-header"><span>Day</span><span>Time</span><span>Trainer</span><span>Level</span></div>
-        <div class="st-row"><span class="font-poppins font-semibold text-white">Mon, Wed, Fri</span><span>6:00 AM – 6:45 AM</span><span>SK Instructor</span><span class="st-level">All Levels</span></div>
-        <div class="st-row"><span class="font-poppins font-semibold text-white">Tue, Thu</span><span>7:00 PM – 7:45 PM</span><span>SK Instructor</span><span class="st-level">All Levels</span></div>
-        <div class="st-row"><span class="font-poppins font-semibold text-white">Saturday</span><span>7:00 AM – 8:00 AM</span><span>Ripunjay Lashkare</span><span class="st-level">All
-            Levels</span></div>
-        <div class="st-row"><span class="font-poppins font-semibold text-white">Sunday</span><span>8:00 AM – 8:45 AM</span><span>SK Instructor</span><span class="st-level">Beginner-Friendly</span></div>
+        <div class="st-header"><span>Class</span><span>Days</span><span>Time</span><span>Level</span></div>
+        <div class="st-row"><span class="font-poppins font-semibold text-white">🧘 Yoga</span><span>Monday, Friday</span><span>7:00 AM – 8:00 AM</span><span class="st-level">All Levels</span></div>
+        <div class="st-row"><span class="font-poppins font-semibold text-white">💃 Zumba (Morning)</span><span>Tuesday, Thursday</span><span>7:00 AM – 8:00 AM</span><span class="st-level">High Energy</span></div>
+        <div class="st-row"><span class="font-poppins font-semibold text-white">💃 Zumba (Evening)</span><span>Monday, Wednesday</span><span>7:30 PM – 8:30 PM</span><span class="st-level">High Energy</span></div>
+        <div class="st-row"><span class="font-poppins font-semibold text-white">🔥 Abs Batch (Morning)</span><span>Tuesday, Thursday</span><span>8:00 AM – 8:45 AM</span><span class="st-level">Core Focus</span></div>
+        <div class="st-row"><span class="font-poppins font-semibold text-white">🔥 Abs Batch (Evening)</span><span>Monday, Wednesday</span><span>7:00 PM – 7:45 PM</span><span class="st-level">Core Focus</span></div>
+        <div class="st-row"><span class="font-poppins font-semibold text-white">🎭 Dance Class</span><span>Mon, Wed, Fri (11 AM) / Tue, Thu, Sat (8:30 PM)</span><span>Various</span><span class="st-level">Special Batch</span></div>
+      </div>
+
+      <!-- Zumba Only Plan Highlight -->
+      <div class="mt-12 p-8 rounded-3xl bg-gradient-to-r from-red-950/40 via-yellow-950/30 to-black border border-[var(--yellow)]/30 flex flex-col md:flex-row items-center justify-between gap-6" data-reveal="rise">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--yellow)]/10 text-[var(--yellow)] text-xs font-semibold uppercase tracking-wider mb-3">
+            ★ Limited Slots Available
+          </div>
+          <h3 class="font-poppins text-2xl md:text-3xl font-bold text-white uppercase">Zumba Only Plan</h3>
+          <p class="font-satoshi text-white/70 text-sm mt-1">4 dedicated high-energy batches per week with certified master instructors.</p>
+        </div>
+        <div class="text-center md:text-right flex-shrink-0">
+          <div class="text-3xl md:text-4xl font-black font-poppins text-[var(--yellow)]">₹1,999<span class="text-sm text-white/50 font-normal"> / month</span></div>
+          <a href="/pages/contact.html" class="inline-block mt-3 px-6 py-2.5 rounded-full bg-[var(--yellow)] text-black font-poppins font-bold text-xs uppercase tracking-wider hover:bg-white transition-all cursor-none" data-cursor>Book Your Spot</a>
+        </div>
       </div>
     </div>
   </section>
@@ -114,9 +131,9 @@
         <h2 class="section-title">FAQ</h2>
       </div>
       <div class="faq-list">
-        <div class="faq-item"><div class="faq-question"><span>Are these classes suitable for beginners?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p>Absolutely! All our Zumba, Yoga, and Aerobics classes are designed to be accessible for beginners while still challenging for advanced members.</p></div></div>
-        <div class="faq-item"><div class="faq-question"><span>Do I need to bring my own yoga mat?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p>We provide premium quality mats for all members, but you are always welcome to bring your own if you prefer.</p></div></div>
-        <div class="faq-item"><div class="faq-question"><span>Are these classes included in the membership?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p>Yes, all group classes are included in the Standard and Premium membership tiers.</p></div></div>
+        <div class="faq-item"><div class="faq-question"><span>Are group classes included in standard gym memberships?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p>Yes, all group Zumba, Yoga, and Abs Batch sessions are fully included across all general SK Health Club membership plans. We also offer the standalone ₹1,999/mo Zumba-only plan for dance fitness enthusiasts.</p></div></div>
+        <div class="faq-item"><div class="faq-question"><span>Do I need prior dance experience for Zumba?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p>Not at all! Zumba is designed for everyone to dance, sweat, smile, and repeat. Simply follow the rhythm and energetic guidance of our certified instructors.</p></div></div>
+        <div class="faq-item"><div class="faq-question"><span>Do I need to bring my own yoga mat?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p>We provide sanitized premium mats in the studio, but members are always welcome to bring their personal mats if they prefer.</p></div></div>
       </div>
     </div>
   </section>

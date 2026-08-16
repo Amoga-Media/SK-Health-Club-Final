@@ -108,8 +108,8 @@
     mm.add("(min-width: 1025px)", () => {
       const section = document.getElementById("reviews");
       if (!section) return;
-      gsap.to(".col-up", { y: -160, ease: "none", scrollTrigger: { trigger: section, start: "top bottom", end: "bottom top", scrub: 1 } });
-      gsap.to(".col-down", { y: 160, ease: "none", scrollTrigger: { trigger: section, start: "top bottom", end: "bottom top", scrub: 1 } });
+      gsap.fromTo(".col-up", { y: 60 }, { y: -80, ease: "none", scrollTrigger: { trigger: section, start: "top bottom", end: "bottom top", scrub: 1 } });
+      gsap.fromTo(".col-down", { y: -40 }, { y: 80, ease: "none", scrollTrigger: { trigger: section, start: "top bottom", end: "bottom top", scrub: 1 } });
     });
     mm.add("(max-width: 1024px)", () => {
       const grid = document.getElementById("mobile-review-grid");
@@ -332,40 +332,29 @@
       });
     });
 
-    /* ── FORM SUBMIT (Web3Forms AJAX handler) ── */
+    /* ── GOOGLE SHEETS FORM SUBMIT HANDLER ── */
+    // Paste your deployed Google Apps Script Web App URL below:
+    const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbzqE8Ylh1a103zVfoss__nSbe-q7PUPn2Cl19zny5ZCyorWu5310cjh09NWgqazrxUY/exec";
+
     const forms = document.querySelectorAll(".join-form");
     forms.forEach(form => {
-      form.addEventListener("submit", function(e) {
+      form.addEventListener("submit", async function(e) {
         e.preventDefault();
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
         const originalBg = submitBtn.style.background;
         const originalColor = submitBtn.style.color;
-        
-        // Rate limiting check
-        try {
-          const now = new Date();
-          const currentMonth = now.getMonth();
-          const currentYear = now.getFullYear();
-          let submitData = JSON.parse(localStorage.getItem("sk_form_submissions")) || { count: 0, month: currentMonth, year: currentYear };
-          
-          if (submitData.month !== currentMonth || submitData.year !== currentYear) {
-            submitData = { count: 0, month: currentMonth, year: currentYear };
-          }
-          
-          if (submitData.count >= 4) {
-            submitBtn.innerHTML = "Limit Reached (4/month)";
-            submitBtn.style.background = "#ff4444";
-            submitBtn.style.color = "#fff";
-            setTimeout(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.style.background = originalBg;
-                submitBtn.style.color = originalColor;
-            }, 4000);
-            return;
-          }
-        } catch (err) {
-          console.error("Rate limit check failed", err);
+
+        const nameInput = form.querySelector('input[name="name"]');
+        const phoneInput = form.querySelector('input[name="phone"]');
+
+        if (nameInput && !nameInput.value.trim()) {
+          nameInput.focus();
+          return;
+        }
+        if (phoneInput && !phoneInput.value.trim()) {
+          phoneInput.focus();
+          return;
         }
 
         // Change button text to indicate loading
@@ -374,64 +363,74 @@
         submitBtn.disabled = true;
 
         const formData = new FormData(form);
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
-
-        fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-            },
-            body: json
-        })
-        .then(async (response) => {
-            let jsonResponse = await response.json();
-            if (response.status == 200) {
-                // Success
-                
-                // Increment rate limit
-                try {
-                  const now = new Date();
-                  const currentMonth = now.getMonth();
-                  const currentYear = now.getFullYear();
-                  let submitData = JSON.parse(localStorage.getItem("sk_form_submissions")) || { count: 0, month: currentMonth, year: currentYear };
-                  if (submitData.month !== currentMonth || submitData.year !== currentYear) {
-                    submitData = { count: 0, month: currentMonth, year: currentYear };
-                  }
-                  submitData.count++;
-                  localStorage.setItem("sk_form_submissions", JSON.stringify(submitData));
-                } catch (err) {
-                  console.error("Rate limit update failed", err);
-                }
-
-                submitBtn.innerHTML = "✓ SENT — WE'LL BE IN TOUCH SOON";
-                submitBtn.style.background = "#fff";
-                submitBtn.style.color = "#000";
-                submitBtn.style.opacity = "1";
-                form.reset();
-                
-                // Revert button after 4 seconds
-                setTimeout(() => {
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.style.background = originalBg;
-                    submitBtn.style.color = originalColor;
-                    submitBtn.disabled = false;
-                }, 4000);
-            } else {
-                // Error
-                console.error(jsonResponse);
-                submitBtn.innerHTML = "Error sending message";
-                submitBtn.disabled = false;
-                submitBtn.style.opacity = "1";
-            }
-        })
-        .catch(error => {
-            console.error(error);
-            submitBtn.innerHTML = "Something went wrong!";
-            submitBtn.disabled = false;
-            submitBtn.style.opacity = "1";
+        const timestamp = new Date().toLocaleString("en-IN", {
+          timeZone: "Asia/Kolkata",
+          dateStyle: "medium",
+          timeStyle: "short"
         });
+        formData.append("timestamp", timestamp);
+
+        try {
+          if (GOOGLE_SHEET_URL && GOOGLE_SHEET_URL !== "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE") {
+            // Submit directly to Google Apps Script Web App
+            await fetch(GOOGLE_SHEET_URL, {
+              method: "POST",
+              body: formData,
+              mode: "no-cors" // Required for Google Apps Script redirects
+            });
+          } else {
+            // Fallback to Web3Forms if Google Sheet URL is not configured yet
+            const object = Object.fromEntries(formData);
+            const res = await fetch("https://api.web3forms.com/submit", {
+              method: "POST",
+              headers: { "Content-Type": "application/json", "Accept": "application/json" },
+              body: JSON.stringify(object)
+            });
+            if (!res.ok) throw new Error("Submission failed");
+          }
+
+          // Success feedback
+          submitBtn.innerHTML = "✓ FREE TRIAL BOOKED — WE'LL CALL YOU SOON!";
+          submitBtn.style.background = "var(--yellow, #FACC15)";
+          submitBtn.style.color = "#000";
+          submitBtn.style.opacity = "1";
+          form.reset();
+
+          // Reset custom dropdowns
+          form.querySelectorAll(".sk-select").forEach(select => {
+            const valueEl = select.querySelector(".sk-select-value");
+            const hiddenInput = select.querySelector("input[type=hidden]");
+            const trigger = select.querySelector(".sk-select-trigger");
+            if (trigger) trigger.classList.remove("has-value");
+            if (hiddenInput && valueEl) {
+              if (hiddenInput.name === "location") valueEl.textContent = "Preferred Location";
+              if (hiddenInput.name === "goal") valueEl.textContent = "Your Goal";
+              hiddenInput.value = "";
+            }
+          });
+
+          // Revert button after 5 seconds
+          setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.style.background = originalBg;
+            submitBtn.style.color = originalColor;
+            submitBtn.disabled = false;
+          }, 5000);
+
+        } catch (error) {
+          console.error("Form submission error:", error);
+          submitBtn.innerHTML = "Error sending message. Please call us!";
+          submitBtn.style.background = "#ff4444";
+          submitBtn.style.color = "#fff";
+          submitBtn.disabled = false;
+          submitBtn.style.opacity = "1";
+
+          setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.style.background = originalBg;
+            submitBtn.style.color = originalColor;
+          }, 4000);
+        }
       });
     });
 

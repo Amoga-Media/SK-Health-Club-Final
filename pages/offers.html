@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="SK Health Club Pune" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta property="og:url" content="https://www.skhealthclub.com/pages/offers.html" />
+  <meta property="og:image" content="/Images/images/desktop/photo-15-desktop.webp" />
+  <link rel="canonical" href="https://www.skhealthclub.com/pages/offers.html" />
+  <title>Exclusive Offers &amp; Member Promotions | SK Health Club Pune</title>
+  <meta name="description" content="Discover active promotions, seasonal passes, Zumba ₹1,999/mo deal, and couples discounts at SK Health Club Pune." />
+  <meta property="og:title" content="Exclusive Offers &amp; Member Promotions | SK Health Club Pune" />
+  <meta property="og:description" content="Limited-time membership deals and specialized training packages at SK Health Club." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_IN" />
+  <link rel="icon" type="image/png" href="/Images/images/logo/SK.png" />
+  <link rel="apple-touch-icon" href="/Images/images/logo/SK.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/js/vendor/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.skhealthclub.com/"},
+      {"@type":"ListItem","position":2,"name":"Offers","item":"https://www.skhealthclub.com/pages/offers.html"}
+    ]}
+  </script>
+  <style>
+    /* Modern Glassmorphic Bento Cards */
+    .bento-card {
+      position: relative;
+      background: radial-gradient(120% 120% at 0% 0%, rgba(28, 28, 35, 0.75) 0%, rgba(12, 12, 15, 0.95) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 32px;
+      overflow: hidden;
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .bento-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 32px;
+      padding: 1.5px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.12), transparent 40%, rgba(230, 255, 0, 0.2));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+    .bento-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(230, 255, 0, 0.3);
+      box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8), 0 0 40px rgba(230, 255, 0, 0.06);
+    }
+
+    /* Live HUD Countdown Units */
+    .hud-timer {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 6px 14px;
+      border-radius: 100px;
+      backdrop-filter: blur(12px);
+    }
+    .hud-box {
+      display: flex;
+      align-items: baseline;
+      gap: 2px;
+    }
+    .hud-val {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: var(--yellow);
+      letter-spacing: -0.02em;
+    }
+    .hud-tag {
+      font-size: 0.65rem;
+      color: rgba(255, 255, 255, 0.45);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .hud-sep {
+      color: rgba(255, 255, 255, 0.25);
+      font-weight: 300;
+      font-size: 0.8rem;
+    }
+
+    /* Expired Card Styling */
+    .expired-card {
+      position: relative;
+      background: radial-gradient(120% 120% at 0% 0%, rgba(20, 20, 22, 0.6) 0%, rgba(10, 10, 12, 0.85) 100%);
+      border: 1px dashed rgba(255, 255, 255, 0.15);
+      border-radius: 32px;
+      overflow: hidden;
+      filter: grayscale(0.85);
+      opacity: 0.75;
+      transition: all 0.4s ease;
+    }
+    .expired-card:hover {
+      filter: grayscale(0.5);
+      opacity: 0.95;
+    }
+    .expired-stamp {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #ef4444;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+    }
+
+    /* Interactive Filter Tabs */
+    .filter-btn {
+      padding: 8px 20px;
+      border-radius: 100px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.6);
+      transition: all 0.3s ease;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--yellow);
+      color: #000;
+      border-color: var(--yellow);
+      box-shadow: 0 0 20px rgba(230, 255, 0, 0.25);
+    }
+  </style>
+</head>
+<body>
+  <div id="cursor-dot"></div>
+  <div id="cursor-aura"><span class="aura-label"></span></div>
+  <div id="global-nav"></div>
+
+  <!-- Hero Section (Full Viewport) -->
+  <section class="page-hero relative min-h-[88vh] lg:min-h-[94vh] flex flex-col justify-between overflow-hidden" style="background:var(--bg)">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[380px] bg-[var(--yellow)]/10 rounded-full blur-[160px] pointer-events-none"></div>
+    </div>
+    
+    <div class="relative z-10 w-full max-w-[1320px] mx-auto px-6 md:px-10 pt-36 lg:pt-28 my-auto">
+      <div class="breadcrumb flex items-center gap-3 mb-8 opacity-80">
+        <a href="/index.html" class="text-xs tracking-widest uppercase text-white/50 cursor-none" data-cursor>Home</a>
+        <span class="text-white/20">/</span>
+        <span class="text-xs tracking-widest uppercase text-white/90">Offers &amp; Specials</span>
+      </div>
+      
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-10">
+        <div class="max-w-2xl">
+          <span class="section-eyebrow-pill" id="phl"><span class="dot"></span>Live Season Promotions</span>
+          <h1 class="font-poppins text-5xl md:text-7xl lg:text-[88px] font-black uppercase leading-[1.02] tracking-tight text-white my-6" id="pht" data-reveal="mask" data-reveal-manual>
+            Exclusive <br /><span class="yellow-stroke">Promotions.</span>
+          </h1>
+          <p class="font-satoshi text-lg md:text-xl text-white/60 leading-relaxed max-w-xl" id="phs">
+            Verified membership specials, couples packages, and specialized athletic squad passes across all 3 Pune locations.
+          </p>
+        </div>
+
+        <!-- Master Floating Live Status Hub -->
+        <div class="bg-white/[0.03] border border-white/10 backdrop-blur-xl p-5 sm:p-7 rounded-3xl flex flex-col gap-4 w-full max-w-md shadow-2xl" data-reveal="rise">
+          <div class="flex items-center justify-between gap-4">
+            <span class="flex items-center gap-2 text-xs font-poppins font-bold uppercase tracking-wider text-[var(--yellow)]">
+              <span class="w-2 h-2 rounded-full bg-[var(--yellow)] animate-ping"></span>
+              Registration Window
+            </span>
+            <span class="text-xs font-mono text-white/40">Limited Slots</span>
+          </div>
+          <div class="flex items-center justify-between gap-1.5 sm:gap-2.5" id="global-timer">
+            <div class="text-center px-2 sm:px-3.5 py-2 sm:py-2.5 bg-black/50 border border-white/5 rounded-xl flex-1 min-w-0">
+              <div class="font-poppins font-extrabold text-xl sm:text-2xl md:text-3xl text-white" id="m-days">04</div>
+              <div class="text-[8px] sm:text-[9px] uppercase tracking-widest text-white/40 font-semibold mt-0.5">Days</div>
+            </div>
+            <div class="text-center px-2 sm:px-3.5 py-2 sm:py-2.5 bg-black/50 border border-white/5 rounded-xl flex-1 min-w-0">
+              <div class="font-poppins font-extrabold text-xl sm:text-2xl md:text-3xl text-[var(--yellow)]" id="m-hours">18</div>
+              <div class="text-[8px] sm:text-[9px] uppercase tracking-widest text-white/40 font-semibold mt-0.5">Hours</div>
+            </div>
+            <div class="text-center px-2 sm:px-3.5 py-2 sm:py-2.5 bg-black/50 border border-white/5 rounded-xl flex-1 min-w-0">
+              <div class="font-poppins font-extrabold text-xl sm:text-2xl md:text-3xl text-white" id="m-mins">42</div>
+              <div class="text-[8px] sm:text-[9px] uppercase tracking-widest text-white/40 font-semibold mt-0.5">Mins</div>
+            </div>
+            <div class="text-center px-2 sm:px-3.5 py-2 sm:py-2.5 bg-black/50 border border-white/5 rounded-xl flex-1 min-w-0">
+              <div class="font-poppins font-extrabold text-xl sm:text-2xl md:text-3xl text-[var(--yellow)]" id="m-secs">15</div>
+              <div class="text-[8px] sm:text-[9px] uppercase tracking-widest text-white/40 font-semibold mt-0.5">Secs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gentle Scroll Indicator -->
+    <div class="relative z-10 w-full max-w-[1320px] mx-auto px-6 md:px-10 pb-8 flex items-center justify-between text-xs text-white/40 font-satoshi">
+      <a href="#offers-section" class="inline-flex items-center gap-2 text-white/50 hover:text-[var(--yellow)] transition-colors cursor-none" data-cursor>
+        <span>Explore All Offers Below</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="animate-bounce"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+      </a>
+      <span class="hidden md:inline-block">SK Health Club Pune • Viman Nagar • Yerwada • Vishranwadi</span>
+    </div>
+  </section>
+
+  <!-- Offers Bento Grid Section -->
+  <section id="offers-section" class="inner-section pt-16 pb-24" style="background:var(--bg); border-top:1px solid var(--line-soft)">
+    <div class="inner-container">
+      <!-- Filter Bar with Generous Breathing Room -->
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-12 pb-8 border-b border-white/10">
+        <div>
+          <span class="kicker">Curated Deals</span>
+          <h2 class="section-title text-2xl md:text-4xl" data-reveal="mask">Available <span class="yellow-text">Packages</span></h2>
+        </div>
+        <div class="flex items-center gap-2.5 flex-wrap" id="offer-filters">
+          <button class="filter-btn active" data-filter="all">All Offers (5)</button>
+          <button class="filter-btn" data-filter="active">Active Specials (4)</button>
+          <button class="filter-btn" data-filter="expired">Past / Sold Out (1)</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8" id="offers-container">
+
+        <!-- 1. HERO SPOTLIGHT CARD: COUPLES ANNUAL PASS (Spans 12 cols on desktop) -->
+        <div class="offer-item lg:col-span-12 bento-card p-8 md:p-12" data-category="active" data-reveal="rise">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-7 flex flex-col justify-between">
+              <div>
+                <div class="flex flex-wrap items-center gap-3 mb-6">
+                  <span class="px-3.5 py-1.5 rounded-full bg-[var(--yellow)]/15 border border-[var(--yellow)]/40 text-[var(--yellow)] font-poppins font-bold text-xs uppercase tracking-wider">
+                    💑 Most Popular Couple Deal
+                  </span>
+                  <div class="hud-timer">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span>
+                    <span class="hud-box"><span class="hud-val c-days">04</span><span class="hud-tag">d</span></span>
+                    <span class="hud-sep">:</span>
+                    <span class="hud-box"><span class="hud-val c-hours">18</span><span class="hud-tag">h</span></span>
+                    <span class="hud-sep">:</span>
+                    <span class="hud-box"><span class="hud-val c-mins">42</span><span class="hud-tag">m</span></span>
+                    <span class="hud-sep">:</span>
+                    <span class="hud-box"><span class="hud-val c-secs">15</span><span class="hud-tag">s</span></span>
+                  </div>
+                </div>
+
+                <h2 class="font-poppins text-3xl md:text-5xl font-extrabold uppercase text-white leading-tight">
+                  Couples Annual <br /><span class="yellow-text">Transformation Pass</span>
+                </h2>
+                <p class="font-satoshi text-white/70 text-base md:text-lg mt-4 max-w-xl leading-relaxed">
+                  "Train together. Transform together." Unrestricted annual membership for two partners across all 3 Pune locations with joint accountability and fitness coaching.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-8 border-t border-white/10 pt-6">
+                  <div class="flex items-center gap-2.5 text-sm text-white/80 font-satoshi">
+                    <span class="text-[var(--yellow)]">✓</span> Two Full 365-Day Memberships
+                  </div>
+                  <div class="flex items-center gap-2.5 text-sm text-white/80 font-satoshi">
+                    <span class="text-[var(--yellow)]">✓</span> 2 Free InBody 3D Scans &amp; Roadmaps
+                  </div>
+                  <div class="flex items-center gap-2.5 text-sm text-white/80 font-satoshi">
+                    <span class="text-[var(--yellow)]">✓</span> Universal Floor, Pool, Ring &amp; Recovery
+                  </div>
+                  <div class="flex items-center gap-2.5 text-sm text-white/80 font-satoshi">
+                    <span class="text-[var(--yellow)]">✓</span> Eucalyptus Steam &amp; Ice Plunge Access
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 flex flex-col justify-center bg-black/40 border border-white/10 rounded-3xl p-8 text-center lg:text-left relative overflow-hidden">
+              <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-[var(--yellow)]/10 rounded-full blur-3xl pointer-events-none"></div>
+              
+              <span class="text-xs uppercase tracking-widest text-white/50 font-poppins font-semibold">Seasonal Pricing</span>
+              <div class="flex items-baseline justify-center lg:justify-start gap-3 my-3">
+                <span class="font-poppins font-black text-5xl md:text-6xl text-[var(--yellow)]">20% OFF</span>
+                <span class="text-white/40 text-lg line-through font-mono">₹60,000</span>
+              </div>
+              <div class="text-2xl font-bold font-poppins text-white">₹48,000 <span class="text-sm font-normal text-white/60">/ Year (For Both)</span></div>
+              <p class="text-xs text-white/50 font-satoshi mt-2">Works out to just ₹2,000/mo per person for complete all-access.</p>
+
+              <div class="mt-8 space-y-3">
+                <a href="/pages/contact.html" class="w-full py-4 rounded-2xl bg-[var(--yellow)] text-black font-poppins font-bold text-sm uppercase tracking-wider text-center block hover:bg-white transition-all cursor-none" data-cursor>
+                  Claim Couples Deal
+                </a>
+                <div class="text-[11px] text-white/40 text-center font-satoshi">
+                  ★ No hidden fees. Instant digital activation &amp; trial tour available.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. ZUMBA ONLY PASS (Spans 6 cols) -->
+        <div class="offer-item lg:col-span-6 bento-card p-8 md:p-10 flex flex-col justify-between" data-category="active" data-reveal="rise">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+              <span class="px-3.5 py-1.5 rounded-full bg-rose-500/15 border border-rose-500/40 text-rose-400 font-poppins font-bold text-xs uppercase tracking-wider">
+                💃 Dance Fitness Pass
+              </span>
+              <div class="hud-timer">
+                <span class="hud-box"><span class="hud-val c-days">04</span><span class="hud-tag">d</span></span>
+                <span class="hud-sep">:</span>
+                <span class="hud-box"><span class="hud-val c-hours">18</span><span class="hud-tag">h</span></span>
+                <span class="hud-sep">:</span>
+                <span class="hud-box"><span class="hud-val c-mins">42</span><span class="hud-tag">m</span></span>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <div class="flex items-baseline gap-3">
+                <span class="font-poppins font-black text-4xl md:text-5xl text-[var(--yellow)]">₹1,999</span>
+                <span class="text-white/50 text-sm font-satoshi">/ Month (Fixed)</span>
+              </div>
+              <h3 class="font-poppins text-2xl md:text-3xl font-bold uppercase text-white mt-2">Zumba Only Plan</h3>
+              <p class="text-white/60 font-satoshi text-sm md:text-base mt-2">
+                "Dance. Sweat. Smile. Repeat." Standalone access to all energetic Zumba batches with certified master choreographers.
+              </p>
+            </div>
+
+            <div class="border-t border-white/10 pt-6 mb-6">
+              <h4 class="font-poppins text-xs uppercase tracking-widest text-white/40 mb-3">Timetable &amp; Details</h4>
+              <ul class="space-y-2 text-sm text-white/80 font-satoshi">
+                <li class="flex items-center gap-2"><span class="text-[var(--yellow)]">✓</span> <strong>Morning:</strong> Tue &amp; Thu at 7:00 AM</li>
+                <li class="flex items-center gap-2"><span class="text-[var(--yellow)]">✓</span> <strong>Evening:</strong> Mon &amp; Wed at 7:30 PM</li>
+                <li class="flex items-center gap-2"><span class="text-[var(--yellow)]">✓</span> Sprung hardwood dance studio with acoustic surround</li>
+                <li class="flex items-center gap-2"><span class="text-[var(--yellow)]">✓</span> Full shower and locker room access included</li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="/pages/contact.html" class="w-full py-3.5 rounded-2xl bg-[var(--yellow)] text-black font-poppins font-bold text-xs uppercase tracking-wider text-center block hover:bg-white transition-all cursor-none" data-cursor>
+            Claim Zumba Pass for ₹1,999
+          </a>
+        </div>
+
+        <!-- 3. 12 + 1 MONTH BONUS ALL-ACCESS (Spans 6 cols) -->
+        <div class="offer-item lg:col-span-6 bento-card p-8 md:p-10 flex flex-col justify-between" data-category="active" data-reveal="rise" data-reveal-delay="0.1">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+              <span class="px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-400 font-poppins font-bold text-xs uppercase tracking-wider">
+                🏆 Best Annual Value
+              </span>
+              <div class="hud-timer">
+                <span class="hud-box"><span class="hud-val c-days">04</span><span class="hud-tag">d</span></span>
+                <span class="hud-sep">:</span>
+                <span class="hud-box"><span class="hud-val c-hours">18</span><span class="hud-tag">h</span></span>
+                <span class="hud-sep">:</span>
+                <span class="hud-box"><span class="hud-val c-mins">42</span><span class="hud-tag">m</span></span>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <div class="flex items-baseline gap-3">
+                <span class="font-poppins font-black text-4xl md:text-5xl text-emerald-400">12 + 1 Free</span>
+                <span class="text-white/50 text-sm font-satoshi">₹30,000 (13 Months)</span>
+              </div>
+              <h3 class="font-poppins text-2xl md:text-3xl font-bold uppercase text-white mt-2">Annual All-Access Plus</h3>
+              <p class="text-white/60 font-satoshi text-sm md:text-base mt-2">
+                Pay for 12 months and receive a 13th month entirely free. Unrestricted universal access across all Pune clubs.
+              </p>
+            </div>
+
+            <div class="border-t border-white/10 pt-6 mb-6">
+              <h4 class="font-poppins text-xs uppercase tracking-widest text-white/40 mb-3">Included Extras</h4>
+              <ul class="space-y-2 text-sm text-white/80 font-satoshi">
+                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> <strong>13 Full Months:</strong> ₹2,307/mo effective price</li>
+                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> 2 Free Personal Training starter sessions</li>
+                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Universal Gym, Pool, Boxing, Turf &amp; Recovery</li>
+                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> 4 Complimentary Guest Day Passes</li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="/pages/contact.html" class="w-full py-3.5 rounded-2xl bg-emerald-400 text-black font-poppins font-bold text-xs uppercase tracking-wider text-center block hover:bg-white transition-all cursor-none" data-cursor>
+            Claim 12 + 1 Bonus Month
+          </a>
+        </div>
+
+        <!-- 4. OPEN WATER & COMPETITION SWIM (Spans 6 cols) -->
+        <div class="offer-item lg:col-span-6 bento-card p-8 md:p-10 flex flex-col justify-between" data-category="active" data-reveal="rise">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+              <span class="px-3.5 py-1.5 rounded-full bg-cyan-500/15 border border-cyan-500/40 text-cyan-400 font-poppins font-bold text-xs uppercase tracking-wider">
+                🏊 Aquatic Squad
+              </span>
+              <span class="text-xs font-mono font-bold text-cyan-400 uppercase">Admission Open</span>
+            </div>
+
+            <div class="mb-6">
+              <div class="flex items-baseline gap-3">
+                <span class="font-poppins font-black text-3xl md:text-4xl text-cyan-400">Squad Pass</span>
+                <span class="text-white/50 text-sm font-satoshi">Season Batch</span>
+              </div>
+              <h3 class="font-poppins text-2xl md:text-3xl font-bold uppercase text-white mt-2">Open Water &amp; Competition Swim</h3>
+              <p class="text-white/60 font-satoshi text-sm md:text-base mt-2">
+                Specialized conditioning and cadence pacing in our 25m heated Olympic pool for triathletes and competitive racers.
+              </p>
+            </div>
+
+            <div class="border-t border-white/10 pt-6 mb-6">
+              <h4 class="font-poppins text-xs uppercase tracking-widest text-white/40 mb-3">Squad Highlights</h4>
+              <ul class="space-y-2 text-sm text-white/80 font-satoshi">
+                <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> 6 Dedicated Lap Lanes with pace clocks &amp; touchpads</li>
+                <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Underwater stroke mechanics analysis</li>
+                <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Triathlon endurance sets &amp; open water breathing drills</li>
+                <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Thermal contrast recovery in eucalyptus steam suites</li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="/pages/contact.html" class="w-full py-3.5 rounded-2xl bg-cyan-400 text-black font-poppins font-bold text-xs uppercase tracking-wider text-center block hover:bg-white transition-all cursor-none" data-cursor>
+            Enroll In Swim Squad
+          </a>
+        </div>
+
+        <!-- 5. EXPIRED OFFER: FOUNDER'S FIRST 100 MEMBERS (Spans 6 cols) -->
+        <div class="offer-item lg:col-span-6 expired-card p-8 md:p-10 flex flex-col justify-between" data-category="expired" data-reveal="rise" data-reveal-delay="0.1">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+              <span class="expired-stamp">
+                ⛔ Expired / Sold Out
+              </span>
+              <div class="hud-timer" style="border-color: rgba(239, 68, 68, 0.3);">
+                <span class="text-xs font-mono font-bold text-red-400">00d : 00h : 00m : 00s</span>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <div class="flex items-baseline gap-3">
+                <span class="font-poppins font-black text-4xl md:text-5xl text-white/50 line-through">50% OFF</span>
+                <span class="text-red-400 text-xs font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-red-500/10">100/100 Claimed</span>
+              </div>
+              <h3 class="font-poppins text-2xl md:text-3xl font-bold uppercase text-white/60 mt-2">Inaugural Founder's 100</h3>
+              <p class="text-white/40 font-satoshi text-sm md:text-base mt-2">
+                Exclusive 50% discount on the 1-Year All-Access Membership reserved strictly for the first 100 founding members.
+              </p>
+            </div>
+
+            <div class="border-t border-white/10 pt-6 mb-6">
+              <h4 class="font-poppins text-xs uppercase tracking-widest text-white/30 mb-3">Historical Terms</h4>
+              <ul class="space-y-2 text-sm text-white/50 font-satoshi">
+                <li class="flex items-center gap-2"><span class="text-red-400">✕</span> <strong>Price was:</strong> ₹15,000 / Year (50% Off Regular ₹30,000)</li>
+                <li class="flex items-center gap-2"><span class="text-red-400">✕</span> Strictly capped at 100 inaugural subscriptions</li>
+                <li class="flex items-center gap-2"><span class="text-red-400">✕</span> All 100 spots successfully registered &amp; locked</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 text-center text-xs text-white/60 font-satoshi">
+            🔒 This promotion has officially ended. Please explore our active deals above or <a href="/pages/contact.html" class="text-[var(--yellow)] underline hover:text-white">join the priority waitlist</a>.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How Claiming Works -->
+  <section class="inner-section py-16 lg:py-24" style="background:var(--bg2); border-top:1px solid var(--line-soft)">
+    <div class="inner-container">
+      <div class="text-center max-w-xl mx-auto mb-16">
+        <span class="kicker centered">Seamless Process</span>
+        <h2 class="section-title" data-reveal="mask">How To Claim<br /><span class="yellow-text">Your Offer</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bracket-card p-8" data-reveal="rise">
+          <div class="font-poppins font-black text-4xl text-[var(--yellow)] mb-4">01</div>
+          <h3 class="font-poppins font-bold text-xl uppercase text-white mb-2">Select Your Pass</h3>
+          <p class="font-satoshi text-white/60 text-sm leading-relaxed">Choose between the Zumba Pass, Couples Pass, Swim Squad, or 12+1 Annual Bonus Deal.</p>
+        </div>
+        <div class="bracket-card p-8" data-reveal="rise" data-reveal-delay="0.1">
+          <div class="font-poppins font-black text-4xl text-[var(--yellow)] mb-4">02</div>
+          <h3 class="font-poppins font-bold text-xl uppercase text-white mb-2">Lock Your Rate</h3>
+          <p class="font-satoshi text-white/60 text-sm leading-relaxed">Submit your details or ping our WhatsApp desk. Your promotional rate is instantly locked for 48 hours.</p>
+        </div>
+        <div class="bracket-card p-8" data-reveal="rise" data-reveal-delay="0.2">
+          <div class="font-poppins font-black text-4xl text-[var(--yellow)] mb-4">03</div>
+          <h3 class="font-poppins font-bold text-xl uppercase text-white mb-2">Start Training</h3>
+          <p class="font-satoshi text-white/60 text-sm leading-relaxed">Visit your preferred club, complete your onboarding assessment, and start your championship transformation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Strip -->
+  <section class="cta-strip-section">
+    <div class="cta-strip-bg">YOUR TURN</div>
+    <div class="cta-strip-content" data-reveal="rise">
+      <h2 class="cta-strip-title">Ready To <span class="yellow-text">Transform?</span></h2>
+      <p class="cta-strip-sub">Lock in your promotional rate before timer runs out. Free trial available.</p>
+      <a href="/pages/contact.html" class="btn-primary cursor-none" data-cursor style="margin-top:32px">
+        Book Free Trial &amp; Claim Offer
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+      </a>
+    </div>
+  </section>
+
+  <div id="global-footer"></div>
+  <script src="/js/vendor/gsap.min.js"></script>
+  <script src="/js/vendor/ScrollTrigger.min.js"></script>
+  <script src="/js/vendor/lenis.min.js"></script>
+  <script src="/js/vendor/swiper-bundle.min.js"></script>
+  <script src="/js/animations.js"></script>
+  <script src="/js/interactions.js"></script>
+  <script src="/js/components.js"></script>
+
+  <!-- Live Countdown Timer & Filter Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Rolling End Time
+      const storageKey = 'sk_offers_timer_v2';
+      let endTime = localStorage.getItem(storageKey);
+      if (!endTime || isNaN(endTime) || Number(endTime) < Date.now()) {
+        endTime = Date.now() + (4 * 24 * 60 * 60 * 1000) + (18 * 60 * 60 * 1000) + (42 * 60 * 1000);
+        localStorage.setItem(storageKey, endTime);
+      } else {
+        endTime = Number(endTime);
+      }
+
+      function updateTimers() {
+        const now = Date.now();
+        const diff = Math.max(0, endTime - now);
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+        const dStr = String(days).padStart(2, '0');
+        const hStr = String(hours).padStart(2, '0');
+        const mStr = String(mins).padStart(2, '0');
+        const sStr = String(secs).padStart(2, '0');
+
+        const elD = document.getElementById('m-days');
+        const elH = document.getElementById('m-hours');
+        const elM = document.getElementById('m-mins');
+        const elS = document.getElementById('m-secs');
+
+        if (elD) elD.textContent = dStr;
+        if (elH) elH.textContent = hStr;
+        if (elM) elM.textContent = mStr;
+        if (elS) elS.textContent = sStr;
+
+        document.querySelectorAll('.c-days').forEach(el => el.textContent = dStr);
+        document.querySelectorAll('.c-hours').forEach(el => el.textContent = hStr);
+        document.querySelectorAll('.c-mins').forEach(el => el.textContent = mStr);
+        document.querySelectorAll('.c-secs').forEach(el => el.textContent = sStr);
+      }
+
+      updateTimers();
+      setInterval(updateTimers, 1000);
+
+      // 2. Interactive Category Filter Buttons
+      const filterBtns = document.querySelectorAll('#offer-filters .filter-btn');
+      const offerCards = document.querySelectorAll('.offer-item');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filter = btn.getAttribute('data-filter');
+          offerCards.forEach(card => {
+            const cat = card.getAttribute('data-category');
+            if (filter === 'all' || cat === filter) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
